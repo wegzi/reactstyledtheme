@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Grenze+Gotisch:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --background: #fafafa;
+  --font-color: #555555;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  color: var(--font-color);
+  background-color: var(--background);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+//-------------
+// SPACING
+//-------------
+$spacer: 1rem;
+
+// .mt-0 {
+//   margin-top: 0 !important;
+// }
+
+// .ml-1 {
+//   margin-left: calc($spacer * 0.25) !important;
+// }
+
+.ml-2 {
+  margin-left: calc(#{$spacer} * 0.5) !important;
+}
+.ml-3 {
+  margin-left: $spacer !important;
+}
+.mt-3 {
+  margin-top: $spacer !important;
+}
