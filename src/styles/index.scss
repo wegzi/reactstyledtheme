@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Grenze+Gotisch:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@200;300;400;500;600;700&display=swap');
-
+@import 'fade';
 :root {
   --background: #fafafa;
   --font-color: #555555;
@@ -18,7 +18,7 @@ html {
   font-size: 1em;
   color: var(--font-color);
   background-color: var(--background);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 body {
   margin: 0;

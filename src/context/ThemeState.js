@@ -13,7 +13,7 @@ export function ThemeProvider({ children }) {
 
   return (
     <ThemeContext.Provider value={{ switchTheme, ...state }}>
-      <StyledTheme theme={state.theme}>{children}</StyledTheme>;
+      <StyledTheme theme={state.theme}>{children}</StyledTheme>
     </ThemeContext.Provider>
   );
 }

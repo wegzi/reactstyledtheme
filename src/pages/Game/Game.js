@@ -1,14 +1,16 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { Container, CardContainer, Col, Section } from './styles';
 import { Button } from '../../Components/Button';
 // import { Header } from '../../Components/layout/Header';
 import { Card } from '../../Components/Card';
 import styled from 'styled-components';
 import { ThemeContext } from '../../context/ThemeState';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 
 export default function Game() {
   const [isOpen, setIsOpen] = useState(true);
   const { switchTheme, isDark } = useContext(ThemeContext);
+  const nodeRef = useRef(null);
   return (
     <>
       <Button className='mb-2 ml-3 mt-3' onClick={() => switchTheme()}>
@@ -24,11 +26,22 @@ export default function Game() {
       </CardContainer>
       <Container>
         <Button onClick={() => setIsOpen(!isOpen)}>Button</Button>
-        {isOpen ? (
-          <Section>
-            <Phrase />
-          </Section>
-        ) : null}
+        <SwitchTransition>
+          <CSSTransition
+            nodeRef={nodeRef}
+            key={isOpen}
+            timeout={200}
+            classNames='fade'
+          >
+            <div ref={nodeRef}>
+              {isOpen ? (
+                <Section>
+                  <Phrase />
+                </Section>
+              ) : null}
+            </div>
+          </CSSTransition>
+        </SwitchTransition>
       </Container>
     </>
   );
