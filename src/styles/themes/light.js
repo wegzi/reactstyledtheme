@@ -12,8 +12,16 @@ export default {
       color: '#FFFFFF',
     },
   },
+  input: {
+    background: '#EEEEEE',
+    color: '#555555',
+  },
+  chatMessage:{
+    background:"#E4E4EB",
+    color:"#555555"
+  },
   //html
-  background: '#fafafa',
+  // background: '#9AA5B1',
   fontcolor: '#555555',
 };
 /**

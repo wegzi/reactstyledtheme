@@ -6,11 +6,19 @@ export default {
   headerHeight: '60px',
   rounded: '0.45rem',
   shadowsm: '0 1px .5px rgba(0, 0, 0, .13)',
-  button: {
+  button: { 
     primary: {
       background: '#303F9F',
       color: '#FFFFFF',
     },
+  },
+  input: {
+    background: '#323F4B',
+    color: '#E0E0E0',
+  },
+  chatMessage:{
+    background:"#616E7C",
+    color:"#E0E0E0"
   },
   //html
   background: '#1D2025',
