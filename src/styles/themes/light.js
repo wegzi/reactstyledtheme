@@ -17,7 +17,7 @@ export default {
     color: '#555555',
   },
   chatMessage:{
-    background:"#E4E4EB",
+    background:"#FFFFFF",
     color:"#555555"
   },
   //html

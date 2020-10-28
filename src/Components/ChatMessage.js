@@ -32,7 +32,7 @@ export const ChatMessage = styled.div.attrs((props) => {
   will-change: '';
   box-shadow: ${props => props.theme.shadowsm};
   &:last-child {
-    margin-bottom: 0;
+    ${'' /* margin-bottom: 0; */}
   }
   ${'' /* &:hover {
     background: ${({ chatMessage }) => Color(chatMessage.background).lighten(0.2)} none;
