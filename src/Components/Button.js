@@ -16,7 +16,7 @@ export const Button = styled.button.attrs((props) => {
   vertical-align: baseline;
   background: ${({ button }) => button.background};
   color: ${({ button }) => button.color};
-  margin: 0;
+  ${'' /* margin: 0; */}
   padding: 0.5em 1.5em 0.5em;
   font-family: 'Alata', sans-serif;
   font-size: 1em;
@@ -34,7 +34,7 @@ export const Button = styled.button.attrs((props) => {
     background 0.2s ease, box-shadow 0.2s ease;
   will-change: '';
   &:hover {
-    background: ${({ button }) => Color(button.background).lighten(0.2)} none;
+    background: ${({ button }) => Color(button.background).lighten(0.2).hex()} none;
     box-shadow: 0 1px 1px 0px #00005529, 0 0 1px 2px #2224260a;
   }
   &:active {

@@ -1,5 +1,5 @@
-import light from '../../styles/themes/light';
-import dark from '../../styles/themes/dark';
+import light from '../../assets/themes/light';
+import dark from '../../assets/themes/dark';
 
 export const initialState = {
   isDark: false,

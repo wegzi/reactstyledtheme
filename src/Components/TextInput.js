@@ -15,7 +15,7 @@ export const TextInput = styled.input.attrs((props) => {
   vertical-align: baseline;
   background: ${({ input }) => input.background};
   color: ${({ input }) => input.color};
-  margin: 0;
+  ${'' /* margin: 0; */}
   padding: 0.5em 1em 0.5em;
   ${'' /* font-family: 'Alata', sans-serif; */}
   font-size: 1em;

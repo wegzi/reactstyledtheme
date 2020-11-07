@@ -6,6 +6,7 @@ export default function Game() {
     <>
       <CardContainer>
         <Col>
+        Game page
         </Col>
       </CardContainer>
     </>

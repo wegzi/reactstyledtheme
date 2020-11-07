@@ -1,0 +1,29 @@
+:root {
+  --background: #fafafa;
+  --font-color: #555555;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  color: var(--font-color);
+  background-color: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}

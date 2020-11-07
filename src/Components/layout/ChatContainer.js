@@ -56,7 +56,6 @@ export function ChatContainer() {
     setMessage('');
     socket.send(JSON.stringify({ username, message: message.trim() }));
   }
-  console.log(chatMessage);
   return (
     <Container>
       <Button className='mb-3' onClick={() => setIsOpen(!isOpen)}>
