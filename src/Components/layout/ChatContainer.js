@@ -11,7 +11,9 @@ const Container = styled.div`
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: calc(100% - 2em);
+  background: ${({ isOpen, theme }) =>
+    isOpen ? theme.ultralight + 'de' : 'transparent'};
+  width: 100%;
 `;
 
 export const Section = styled.div`
@@ -57,7 +59,7 @@ export function ChatContainer() {
     socket.send(JSON.stringify({ username, message: message.trim() }));
   }
   return (
-    <Container>
+    <Container className='px-3 pt-3 rounded-t-xl' isOpen={isOpen}>
       <Button className='mb-3' onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? 'Close' : 'Open'}
       </Button>
@@ -94,10 +96,12 @@ export function ChatContainer() {
             onChange={(ev) => setMessage(ev.target.value)}
             value={message}
             className='mr-2'
+            placeholder='Message'
           />
           <Button onClick={() => onsubmit(message)}>Button</Button>
         </div>
         <TextInput
+          placeholder='User name'
           onChange={(ev) => setUsername(ev.target.value)}
           value={username}
           className='mt-3 mb-3'

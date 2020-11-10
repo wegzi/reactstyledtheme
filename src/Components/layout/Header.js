@@ -35,7 +35,8 @@ const HeaderContainer = styled.div`
   font-family: 'Prata', serif;
   top: 0;
   height: ${(props) => props.theme.headerHeight};
-  background-color: ${(props) => props.theme.primary}a3;
+  background-color: ${(props) => props.theme.header.background};
+  color: ${(props) => props.theme.header.color};
   ${'' /* color: ${(props) => props.theme.white}; */}
   display: flex;
   align-items: center;
@@ -52,8 +53,7 @@ const Emogi = styled.span`
 
 export function Header() {
   const { switchTheme, isDark } = useContext(ThemeContext);
-  const [isOpen, setIsOpen] = useState(true);
-  window.Color = Color;
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <HeaderContainer>
@@ -75,9 +75,9 @@ const CollapseMenu = ({ isOpen }) => (
     <Collapse isOpen={isOpen}>
       <MenuContainer className='rounded-b-lg p-2 pb-8'>
         <ul>
-          <MenuItem className='p-3 rounded'>Account</MenuItem>
-          <MenuItem className='p-3 rounded'>Notifications</MenuItem>
-          <MenuItem className='p-3 rounded'>Apparence</MenuItem>
+          <MenuItem className='p-3 rounded'>Home</MenuItem>
+          <MenuItem className='p-3 rounded'>Friends</MenuItem>
+          <MenuItem className='p-3 rounded'>Tasks</MenuItem>
           <MenuItem className='p-3 rounded'>Privacy & Security</MenuItem>
           <MenuItem className='p-3 rounded'>Help and Suppoert</MenuItem>
           <MenuItem className='p-3 rounded'>About</MenuItem>

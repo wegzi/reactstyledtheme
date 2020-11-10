@@ -34,10 +34,14 @@ export const Button = styled.button.attrs((props) => {
     background 0.2s ease, box-shadow 0.2s ease;
   will-change: '';
   &:hover {
-    background: ${({ button }) => Color(button.background).lighten(0.2).hex()} none;
+    background: ${({ button }) => Color(button.background).lighten(0.2).hex()}
+      none;
     box-shadow: 0 1px 1px 0px #00005529, 0 0 1px 2px #2224260a;
   }
   &:active {
     background: ${({ button }) => button.background} none;
+  }
+  &:focus {
+    outline: none;
   }
 `;

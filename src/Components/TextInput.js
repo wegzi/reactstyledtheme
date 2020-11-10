@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import Color from 'color';
 
-const types = ['primary'];
 
 export const TextInput = styled.input.attrs((props) => {
   return { ...props, input: props.theme.input };
 })`
-  cursor: pointer;
+  ${'' /* cursor: pointer; */}
   display: inline-block;
   width: 100%;
+  min-width: 50px;
   min-height: 1em;
   outline: 0;
   border: none;
